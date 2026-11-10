@@ -1,4 +1,4 @@
-.PHONY: up up-dev down logs test lint ingest evaluate
+.PHONY: up up-dev down logs test lint ingest train evaluate
 
 COMPOSE := docker compose
 COMPOSE_DEV := docker compose -f docker-compose.yml -f docker-compose.dev.yml
@@ -19,11 +19,13 @@ test:
 	cd backend && python -m pytest tests -v
 
 lint:
-	cd backend && python -m ruff check app tests ../scripts
+	python -m ruff check backend scripts
 
 ingest:
 	python scripts/ingest_data.py --input-dir data/raw
 
-evaluate:
-	python scripts/evaluate_rag.py --dataset data/processed/eval_dataset.jsonl
+train:
+	python scripts/train_model.py
 
+evaluate:
+	python scripts/evaluate_model.py

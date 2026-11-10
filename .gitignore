@@ -36,12 +36,20 @@ data/processed/*
 !data/processed/.gitkeep
 *.csv
 *.parquet
+*.xlsx
+*.xls
 
-# Models and vector database storage
+# Models (preserve models/.gitkeep only) and local runtime storage
+models/*
+!models/.gitkeep
 *.pt
 *.bin
 *.safetensors
-qdrant_storage/
+*.pkl
+*.joblib
+*.onnx
+postgres_data/
+n8n_data/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
@@ -64,4 +72,3 @@ docker-compose.override.yml
 # Logs
 logs/
 *.log
-
