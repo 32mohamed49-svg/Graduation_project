@@ -1,0 +1,50 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Data, notebooks, documentation, and legacy files
+data
+notebooks
+docs
+legacy
+
+# Dependencies and build artifacts
+node_modules
+**/node_modules
+dist
+**/dist
+.venv
+venv
+__pycache__
+**/__pycache__
+*.py[cod]
+
+# Tests and dev tooling (excluded from production images)
+tests
+**/tests
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.coverage
+htmlcov
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime artifacts, IDE, and OS files
+.ipynb_checkpoints
+**/.ipynb_checkpoints
+qdrant_storage
+logs
+*.log
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+docker-compose*.yml
+Makefile
+README.md
+
