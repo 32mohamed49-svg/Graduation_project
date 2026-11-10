@@ -202,75 +202,7 @@ Graduation-project/
 | **Model & System Metrics** | Forecast `MAE` / `RMSE`, stockout early-warning recall, downtime cost saved, trigger-to-PO latency |
 
 <a id="getting-started"></a>
-## 🚀 Getting Started | التشغيل المحلي
 
-### Prerequisites | المتطلبات
-
-- Python **3.11 or later**
-- Node.js **20 or later** and npm (for React frontend development)
-- Docker Engine / Docker Desktop with Docker Compose v2
-- Git
-
-### 1. Clone the repository
-
-```bash
-git clone <YOUR_REPOSITORY_URL>
-cd Graduation-project
-```
-
-### 2. Configure environment variables
-
-```bash
-cp .env.example .env
-```
-
-On Windows PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-**Never commit `.env` or real API keys, passwords, database credentials, or tokens.**
-
-### 3. Start the Docker stack
-
-From the repository root:
-
-```bash
-make up
-```
-
-Or for hot-reload development mode:
-
-```bash
-make up-dev
-```
-
-View logs or stop containers:
-
-```bash
-make logs
-make down
-```
-
-### 4. Local Python setup (Backend & ML Scripts)
-
-```bash
-python -m venv .venv
-# Linux/macOS: source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
-Once modules are implemented under `backend/app/` and `scripts/`:
-
-```bash
-make test
-make lint
-make ingest
-make train
-make evaluate
-```
 
 ## 🔐 Data & Credentials Policy | سياسة البيانات والاعتماد
 
