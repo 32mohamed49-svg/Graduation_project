@@ -37,7 +37,8 @@ htmlcov
 # Runtime artifacts, IDE, and OS files
 .ipynb_checkpoints
 **/.ipynb_checkpoints
-qdrant_storage
+postgres_data
+n8n_data
 logs
 *.log
 .vscode
@@ -47,4 +48,3 @@ Thumbs.db
 docker-compose*.yml
 Makefile
 README.md
-
