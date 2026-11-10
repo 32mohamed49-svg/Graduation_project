@@ -34,9 +34,9 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
-*.csv
+# *.csv
 *.parquet
-*.xlsx
+# *.xlsx
 *.xls
 
 # Models (preserve models/.gitkeep only) and local runtime storage
